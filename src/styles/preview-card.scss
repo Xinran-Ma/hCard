@@ -1,0 +1,84 @@
+.preview-card {
+    background-color: #e7e9ec;
+    flex: 0 0 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+
+    @media screen and (min-width: 768px) {
+        flex: 0 0 50%;
+        padding: 50px;
+    }
+
+    &__container {
+        width: 100%;
+    }
+
+    &__top-header {
+        font-size: 18px;
+        font-weight: 500;
+        text-align: right;
+        color: #a5b1b2;
+    }
+
+    &__card {
+        &--upper {
+            background-color: #3d4f61;
+            padding: 60px 20px 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        &--lower {
+            padding: 30px 20px;
+            background-color: white;
+        }
+    }
+
+    &__name {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        display: block;
+        height: 28px;
+    }
+
+    &__avatar {
+        object-fit: cover;
+        width: 100px;
+        height: 120px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    &__info-details-row {
+        display: flex;
+        border-bottom: 1px solid lightgrey;
+        padding: 5px 0;
+        min-height: 30px;
+
+        &--two-cols {
+            border-bottom: none;
+
+            & > .preview-card__info-details-row {
+                flex: 0 0 50%;
+            }
+        }
+    }
+
+    &__info-name {
+        flex: 0 0 auto;
+        width: 100px;
+        color: #4c5f73;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__info-value {
+        overflow-wrap: anywhere;
+    }
+}

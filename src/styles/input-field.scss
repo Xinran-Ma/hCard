@@ -1,0 +1,62 @@
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        width: 50%;
+    }
+
+    &:nth-child(odd) {
+        @media screen and (min-width: 768px) {
+            padding-right: 10px;
+        }
+    }
+
+    &:nth-child(even) {
+        @media screen and (min-width: 768px) {
+            padding-left: 10px;
+        }
+    }
+
+    label {
+        color: #3a4c60;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 8px;
+        font-size: 1rem;
+        width: 100%;
+
+        /* Disable arrows for number input field */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    &.input-button {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__has-error {
+        background-color: orange;
+        position: absolute;
+        bottom: -30px;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}

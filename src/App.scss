@@ -1,0 +1,19 @@
+@import './styles/input-field.scss';
+@import './styles/input-column.scss';
+@import './styles/button.scss';
+@import './styles/preview-card';
+
+* {
+    box-sizing: border-box;
+}
+
+.h-card {
+    display: flex;
+    max-width: 1280px;
+    margin: auto;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+}
